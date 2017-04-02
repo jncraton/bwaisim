@@ -8,18 +8,18 @@ aibin = AIBIN.AIBIN()
 aibin.load_file(file)
 
 class Town:
-  def __init__(self):
+  def __init__(self, mineral_patches=9, minerals_per_patch=1500, geysers=1, gas_per_geyser=5000):
     self.owned = []
-    self.minerals_remaining = 9 * 1500.
-    self.gas_remaining = 5000.
+    self.minerals_remaining = mineral_patches * minerals_per_patch
+    self.gas_remaining = geysers * gas_per_geyser
 
 class Thread:
-  def __init__(self, script, pc=0):
-    self.script = script
+  def __init__(self, player, pc=0):
+    self.player = player
     self.pc = pc
 
   def do_tick(self):
-    print(self.script.commands[self.pc])
+    print(self.player.commands[self.pc])
 
 class Player:
   def __init__(self, commands):
