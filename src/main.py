@@ -10,7 +10,7 @@ aibin.load_file(file)
 class Town:
   def __init__(self):
     self.owned = []
-    self.minerals_remaining = 8 * 1500.
+    self.minerals_remaining = 9 * 1500.
     self.gas_remaining = 5000.
 
 class Thread:
