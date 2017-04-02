@@ -1,0 +1,3 @@
+[submodule "pyms"]
+	path = pyms
+	url = git@github.com:jncraton/PyMS.git
